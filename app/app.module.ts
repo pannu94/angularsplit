@@ -4,14 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { PortalModule } from '@angular/cdk/portal';
 
 import { AppComponent } from './app.component';
-import { WindowComponent } from './window.component';
-import { MapOneComponent } from './mapone.component';
+import { AppSubModule } from './sub/app.sub.module';
 import { MapTwoComponent } from './maptwo.component';
-import { MapThreeComponent } from './mapthree.component';
+import { WindowComponent } from './window.component';
+
 
 @NgModule({
-  imports: [BrowserModule, PortalModule],
-  declarations: [AppComponent, WindowComponent, MapOneComponent, MapTwoComponent, MapThreeComponent],
+  imports: [BrowserModule, PortalModule, AppSubModule],
+  declarations: [AppComponent, MapTwoComponent, WindowComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
